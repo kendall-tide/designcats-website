@@ -5,27 +5,26 @@
 (function () {
     'use strict';
 
-    const header   = document.getElementById('site-header');
-    const toggle   = document.querySelector('.nav__toggle');
-    const navLinks = document.querySelector('.nav__links');
+    var header   = document.getElementById('site-header');
+    var toggle   = document.querySelector('.nav__toggle');
+    var navLinks = document.querySelector('.nav__links');
 
-    // ——— Scroll-aware header shadow ———
+    // Scroll-aware header border
     function onScroll() {
-        header.classList.toggle('scrolled', window.scrollY > 50);
+        header.classList.toggle('scrolled', window.scrollY > 40);
     }
-
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // ——— Mobile nav toggle ———
+    // Mobile nav toggle
     toggle.addEventListener('click', function () {
-        const isOpen = navLinks.classList.toggle('open');
+        var isOpen = navLinks.classList.toggle('open');
         toggle.classList.toggle('open', isOpen);
         toggle.setAttribute('aria-expanded', String(isOpen));
         document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close mobile nav when a link is tapped
+    // Close mobile nav on link tap
     navLinks.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
             navLinks.classList.remove('open');
@@ -35,7 +34,7 @@
         });
     });
 
-    // ——— Close mobile nav on outside click ———
+    // Close mobile nav on outside click
     document.addEventListener('click', function (e) {
         if (
             navLinks.classList.contains('open') &&
@@ -49,49 +48,18 @@
         }
     });
 
-    // ——— Smooth scroll for anchor links (offset for fixed nav) ———
+    // Smooth scroll with fixed-nav offset
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
         link.addEventListener('click', function (e) {
-            const href = link.getAttribute('href');
+            var href = link.getAttribute('href');
             if (href === '#' || href === '#top') return;
-            const target = document.querySelector(href);
+            var target = document.querySelector(href);
             if (!target) return;
             e.preventDefault();
-            const navHeight = 72;
-            const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+            var offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 68;
+            var top = target.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: top, behavior: 'smooth' });
         });
     });
-
-    // ——— Subtle fade-in on scroll for key elements ———
-    if ('IntersectionObserver' in window) {
-        const targets = document.querySelectorAll(
-            '.section__heading, .section__intro, .about__text p, .about__stats, ' +
-            '.service-card, .review-card, .contact__detail'
-        );
-
-        targets.forEach(function (el) {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(16px)';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        });
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
-        });
-
-        targets.forEach(function (el) {
-            observer.observe(el);
-        });
-    }
 
 })();
