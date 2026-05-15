@@ -5,17 +5,13 @@
 (function () {
     'use strict';
 
-    const header  = document.getElementById('site-header');
-    const toggle  = document.querySelector('.nav__toggle');
+    const header   = document.getElementById('site-header');
+    const toggle   = document.querySelector('.nav__toggle');
     const navLinks = document.querySelector('.nav__links');
 
     // ——— Scroll-aware header shadow ———
     function onScroll() {
-        if (window.scrollY > 24) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 50);
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -53,16 +49,31 @@
         }
     });
 
-    // ——— Subtle fade-in on scroll for section headings ———
+    // ——— Smooth scroll for anchor links (offset for fixed nav) ———
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            const href = link.getAttribute('href');
+            if (href === '#' || href === '#top') return;
+            const target = document.querySelector(href);
+            if (!target) return;
+            e.preventDefault();
+            const navHeight = 72;
+            const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+    });
+
+    // ——— Subtle fade-in on scroll for key elements ———
     if ('IntersectionObserver' in window) {
         const targets = document.querySelectorAll(
-            '.section__label, .section__heading, .about__text p, .service-card, .review-card, .contact__detail'
+            '.section__heading, .section__intro, .about__text p, .about__stats, ' +
+            '.service-card, .review-card, .contact__detail'
         );
 
         targets.forEach(function (el) {
             el.style.opacity = '0';
             el.style.transform = 'translateY(16px)';
-            el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         });
 
         const observer = new IntersectionObserver(function (entries) {
@@ -74,7 +85,7 @@
                 }
             });
         }, {
-            threshold: 0.12,
+            threshold: 0.1,
             rootMargin: '0px 0px -40px 0px'
         });
 

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignCats — Independent Jaguar Specialist, Andover</title>
-    <meta name="description" content="DesignCats is an independent Jaguar specialist based in Andover, Hampshire. Trusted by Jaguar owners across the area for expert servicing, diagnostics and repairs.">
+    <title>DesignCats | Independent Jaguar Specialist</title>
+    <meta name="description" content="DesignCats – Independent Jaguar Specialist in Andover, Hampshire. Expert servicing, repairs and restoration for all Jaguar models.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
          ===================== -->
     <header class="site-header" id="site-header">
         <nav class="nav">
-            <a href="#top" class="nav__logo">DesignCats</a>
+            <a href="#top" class="nav__logo">Design<span>Cats</span></a>
 
             <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
                 <span></span>
@@ -31,6 +31,8 @@
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
+            <a href="tel:01264123456" class="nav__phone">01264 123 456</a>
         </nav>
     </header>
 
@@ -38,56 +40,54 @@
 
         <!-- =====================
              HERO
-             — Replace .hero__image-placeholder with a real photo:
-               <img src="images/hero.jpg" alt="Jaguar in the workshop">
-               and set the overlay via CSS on .hero__bg::after
              ===================== -->
         <section id="top" class="hero">
             <div class="hero__bg">
-                <div class="hero__image-placeholder" aria-hidden="true"></div>
-                <!-- When a real photo is used, uncomment and replace the line above:
-                <img src="images/hero.jpg" alt="Jaguar in the DesignCats workshop">
-                -->
+                <img src="images/hero-jaguar.jpg" alt="Classic Jaguar E-Type">
             </div>
             <div class="hero__overlay" aria-hidden="true"></div>
 
             <div class="hero__content">
-                <p class="hero__label">Independent Jaguar Specialist &mdash; Andover, Hampshire</p>
-                <h1 class="hero__heading">Proper care,<br>properly done.</h1>
-                <div class="hero__accent-line" aria-hidden="true"></div>
-                <p class="hero__sub">Specialist knowledge. Straight talking. Work you can trust.</p>
-                <a href="#contact" class="btn btn--outline">Get in touch</a>
-            </div>
-
-            <div class="hero__scroll" aria-hidden="true">
-                <span>Scroll</span>
-                <div class="hero__scroll-line"></div>
+                <span class="hero__label">Independent Jaguar Specialist</span>
+                <h1 class="hero__heading">Passion, Precision &amp; Expertise for Your Jaguar</h1>
+                <p class="hero__sub">Dedicated to maintaining the heritage and performance of your Jaguar. Family-run specialists serving Hampshire and beyond.</p>
+                <div class="hero__cta">
+                    <a href="#contact" class="btn btn--primary">Get in Touch</a>
+                    <a href="#services" class="btn btn--outline">Our Services</a>
+                </div>
             </div>
         </section>
 
         <!-- =====================
              ABOUT
-             — Replace .image-placeholder with a real photo:
-               <img src="images/workshop.jpg" alt="The DesignCats workshop">
              ===================== -->
         <section id="about" class="about section">
             <div class="container">
                 <div class="about__inner">
                     <div class="about__text">
-                        <p class="section__label">About</p>
-                        <h2 class="section__heading">We know Jaguars.</h2>
-                        <p>DesignCats has been looking after Jaguars in the Andover area for many years. It started simply — a genuine love for these cars and a belief that their owners deserve a specialist who actually understands them.</p>
-                        <p>People come here because they've tried elsewhere and wanted something better. Somewhere the mechanic speaks to you directly, tells you exactly what's happening with your car, and only does what's genuinely needed.</p>
-                        <p>No unnecessary work. No upselling. Just honest, careful attention to every Jaguar that comes through the door — whether that's a routine service, a tricky diagnosis, or something more involved.</p>
-                        <p>If you've been looking for someone who really knows these cars, you've found the right place.</p>
-                    </div>
-                    <div class="about__image">
-                        <div class="image-placeholder">
-                            <span>Workshop photograph</span>
+                        <h2 class="section__heading">Dedicated Jaguar Care Since 1995</h2>
+                        <p>DesignCats was established with a simple mission: to provide Jaguar owners with the specialist care their vehicles deserve. As independent specialists, we combine decades of expertise with a genuine passion for these iconic British motorcars.</p>
+                        <p>From routine servicing to complex restorations, our team treats every Jaguar that enters our workshop with the attention to detail it warrants. We understand that your Jaguar is more than just a car—it's a piece of automotive history.</p>
+
+                        <div class="about__stats">
+                            <div class="about__stat">
+                                <div class="about__stat-number">30+</div>
+                                <div class="about__stat-label">Years Experience</div>
+                            </div>
+                            <div class="about__stat">
+                                <div class="about__stat-number">2,500+</div>
+                                <div class="about__stat-label">Jaguars Serviced</div>
+                            </div>
+                            <div class="about__stat">
+                                <div class="about__stat-number">100%</div>
+                                <div class="about__stat-label">Jaguar Focused</div>
+                            </div>
                         </div>
-                        <!-- Real image:
-                        <img src="images/workshop.jpg" alt="The DesignCats workshop">
-                        -->
+                    </div>
+
+                    <div class="about__image">
+                        <img src="images/hero-jaguar.jpg" alt="Jaguar specialist workshop">
+                        <div class="about__image-accent" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>
@@ -98,76 +98,83 @@
              ===================== -->
         <section id="services" class="services section section--alt">
             <div class="container">
-                <p class="section__label">What we do</p>
-                <h2 class="section__heading">Services</h2>
-                <p class="section__intro">We cover the full range of Jaguar work, from a routine annual service to more involved mechanical and bodywork repairs. Everything is handled with the same level of care.</p>
+                <div class="section__header">
+                    <h2 class="section__heading">Our Services</h2>
+                    <p class="section__intro">Comprehensive care for all Jaguar models, from classics to modern vehicles.</p>
+                </div>
 
                 <div class="services__grid">
 
                     <div class="service-card">
                         <div class="service-card__icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="9"/>
-                                <path d="M12 7v5l3 3"/>
-                                <path d="M5.2 5.2A9 9 0 0 1 18.8 18.8"/>
+                            <!-- Settings / gear icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                                <circle cx="12" cy="12" r="3"/>
                             </svg>
                         </div>
                         <h3>Servicing &amp; Maintenance</h3>
-                        <p>Full and interim services carried out to manufacturer specification, using quality parts suited to your model and mileage.</p>
+                        <p>Regular servicing using genuine or quality equivalent parts to keep your Jaguar running at its best.</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card__icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                                <path d="M8 21h8M12 17v4"/>
-                            </svg>
-                        </div>
-                        <h3>Diagnostics</h3>
-                        <p>Specialist diagnostic equipment for all Jaguar systems. We find the real cause — not just the warning light. Then we explain it clearly.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-card__icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Wrench icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                             </svg>
                         </div>
-                        <h3>Mechanical Repairs</h3>
-                        <p>Engine, gearbox, suspension, brakes — all mechanical work handled in-house by someone who has spent years working on these specific cars.</p>
+                        <h3>Repairs &amp; Diagnostics</h3>
+                        <p>Expert diagnosis and repair of mechanical, electrical and electronic systems across all Jaguar models.</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card__icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            <!-- Sparkles icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                                <path d="M20 3v4M22 5h-4M4 17v2M5 18H3"/>
                             </svg>
                         </div>
-                        <h3>Bodywork &amp; Paint</h3>
-                        <p>Careful bodywork and paint repairs to match the original finish. We take our time because the end result is what matters.</p>
+                        <h3>Restoration</h3>
+                        <p>Sympathetic restoration of classic Jaguars, preserving originality whilst ensuring reliability for modern use.</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card__icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            <!-- Shield icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
                             </svg>
                         </div>
-                        <h3>MOT Preparation</h3>
-                        <p>A thorough pre-MOT check to make sure there are no surprises on the day. We'll tell you exactly what needs attention — and what can wait.</p>
+                        <h3>MOT Testing</h3>
+                        <p>Class IV MOT testing for your Jaguar, with expert advice on any work required to ensure a pass.</p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-card__icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"/>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            <!-- Truck icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/>
+                                <rect x="9" y="11" width="14" height="10" rx="2"/>
+                                <circle cx="12" cy="21" r="1"/>
+                                <circle cx="20" cy="21" r="1"/>
                             </svg>
                         </div>
-                        <h3>Pre-Purchase Inspections</h3>
-                        <p>Thinking of buying a Jaguar? We'll look it over properly before you commit — the kind of thorough check that only a Jaguar specialist can do.</p>
+                        <h3>Pre-Purchase Inspection</h3>
+                        <p>Comprehensive vehicle inspections before you buy, helping you make an informed decision.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card__icon" aria-hidden="true">
+                            <!-- Package icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/>
+                                <path d="M12 22V12M3.3 7l8.7 5 8.7-5"/>
+                            </svg>
+                        </div>
+                        <h3>Parts Supply</h3>
+                        <p>Access to genuine, OEM and quality aftermarket parts for all Jaguar models at competitive prices.</p>
                     </div>
 
                 </div>
@@ -179,53 +186,43 @@
              ===================== -->
         <section id="reviews" class="reviews section">
             <div class="container">
-                <p class="section__label">What customers say</p>
-                <h2 class="section__heading">Trusted by local Jaguar owners</h2>
-                <p class="section__intro">Word of mouth has always been the way most customers find us. We'd like to think that says something.</p>
+                <div class="section__header">
+                    <h2 class="section__heading">What Our Clients Say</h2>
+                    <p class="section__intro">Don't just take our word for it—hear from Jaguar owners who trust us with their vehicles.</p>
+                </div>
 
                 <div class="reviews__grid">
 
                     <div class="review-card">
                         <div class="review-card__stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                         <blockquote>
-                            <p>"I've been bringing my XF here for three years. It's always done properly, explained clearly, and never overpriced. Exactly what you want from a local specialist."</p>
+                            <p>"Exceptional service and genuine expertise. They understood exactly what my E-Type needed and the work was completed to the highest standard. Highly recommended."</p>
                         </blockquote>
                         <div class="review-card__author">
-                            <strong>David H.</strong>
-                            <span>Jaguar XF owner &mdash; Andover</span>
+                            <strong>James H.</strong>
+                            <span>1967 E-Type Series 1</span>
                         </div>
                     </div>
 
                     <div class="review-card">
                         <div class="review-card__stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                         <blockquote>
-                            <p>"A dealership had quoted me something alarming. I came here for a second opinion and the actual problem was far simpler — fixed the same week at a fraction of the price."</p>
+                            <p>"I've been bringing my XF here for years. The team are knowledgeable, honest and always go the extra mile. It's rare to find such dedication."</p>
                         </blockquote>
                         <div class="review-card__author">
-                            <strong>Margaret T.</strong>
-                            <span>Jaguar XE owner &mdash; Whitchurch</span>
+                            <strong>Sarah M.</strong>
+                            <span>Jaguar XF Portfolio</span>
                         </div>
                     </div>
 
                     <div class="review-card">
                         <div class="review-card__stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                         <blockquote>
-                            <p>"The kind of garage you hope to find but rarely do. Straight talking, clearly very knowledgeable, and the car always comes back right. I wouldn't go anywhere else."</p>
+                            <p>"From the initial consultation to the finished restoration, the professionalism was outstanding. My XK120 has never looked or driven better."</p>
                         </blockquote>
                         <div class="review-card__author">
-                            <strong>Robert M.</strong>
-                            <span>Jaguar F-Type owner &mdash; Basingstoke</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-card__stars" aria-label="Five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <blockquote>
-                            <p>"Had a pre-purchase inspection done before buying my XJ. Thorough, honest, and it saved me from a car with a costly hidden problem. Excellent service, would recommend without hesitation."</p>
-                        </blockquote>
-                        <div class="review-card__author">
-                            <strong>Susan K.</strong>
-                            <span>Jaguar XJ owner &mdash; Stockbridge</span>
+                            <strong>David R.</strong>
+                            <span>1953 XK120 Roadster</span>
                         </div>
                     </div>
 
@@ -235,62 +232,69 @@
 
         <!-- =====================
              CONTACT
-             — Replace .image-placeholder--map with a Google Maps embed:
-               <iframe src="https://maps.google.com/..." ...></iframe>
-               or a static map image:
-               <img src="images/map.jpg" alt="DesignCats location map">
              ===================== -->
         <section id="contact" class="contact section section--alt">
             <div class="container">
                 <div class="contact__inner">
 
                     <div class="contact__info">
-                        <p class="section__label">Get in touch</p>
-                        <h2 class="section__heading">Come and see us.</h2>
-                        <p>We're based in Andover, Hampshire. If you'd like to discuss your Jaguar or arrange a booking, give us a call or drop us a message — we'll get back to you promptly.</p>
+                        <h2 class="section__heading">Get in Touch</h2>
+                        <p>Whether you need a routine service or have a specific project in mind, we'd love to hear from you.</p>
 
                         <div class="contact__details">
 
                             <div class="contact__detail">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.64 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 5.94 5.94l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/>
-                                </svg>
+                                <div class="contact__detail-icon" aria-hidden="true">
+                                    <!-- Phone icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.64 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 5.94 5.94l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/>
+                                    </svg>
+                                </div>
                                 <div>
-                                    <strong>Telephone</strong>
-                                    <a href="tel:+441264000000">01264 000 000</a>
+                                    <h4>Phone</h4>
+                                    <a href="tel:01264123456">01264 123 456</a>
                                 </div>
                             </div>
 
                             <div class="contact__detail">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
+                                <div class="contact__detail-icon" aria-hidden="true">
+                                    <!-- Mail icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                    </svg>
+                                </div>
                                 <div>
-                                    <strong>Email</strong>
+                                    <h4>Email</h4>
                                     <a href="mailto:info@designcats.co.uk">info@designcats.co.uk</a>
                                 </div>
                             </div>
 
                             <div class="contact__detail">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
-                                </svg>
+                                <div class="contact__detail-icon" aria-hidden="true">
+                                    <!-- MapPin icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
                                 <div>
-                                    <strong>Location</strong>
-                                    <span>Andover, Hampshire, SP10</span>
+                                    <h4>Address</h4>
+                                    <span>Unit 5, Industrial Estate<br>Andover, Hampshire<br>SP10 3LU</span>
                                 </div>
                             </div>
 
                             <div class="contact__detail">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12 6 12 12 16 14"/>
-                                </svg>
+                                <div class="contact__detail-icon" aria-hidden="true">
+                                    <!-- Clock icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
                                 <div>
-                                    <strong>Hours</strong>
-                                    <span>Monday &ndash; Friday, 8am &ndash; 5:30pm</span>
+                                    <h4>Opening Hours</h4>
+                                    <span>Monday &ndash; Friday: 8:00am &ndash; 5:30pm<br>Saturday: By appointment</span>
                                 </div>
                             </div>
 
@@ -298,21 +302,16 @@
                     </div>
 
                     <div class="contact__map">
-                        <div class="image-placeholder image-placeholder--map">
-                            <span>Map or location image</span>
-                        </div>
-                        <!-- Google Maps embed example:
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=..."
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40187.14326973868!2d-1.5236!3d51.2114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873e7d5f2e9b0b7%3A0x89c29f9e8f5c8c9a!2sAndover!5e0!3m2!1sen!2suk!4v1620000000000!5m2!1sen!2suk"
                             width="100%"
-                            height="460"
-                            style="border:0;"
+                            height="100%"
+                            style="border:0; display:block; min-height:400px;"
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
-                            title="DesignCats location">
+                            title="DesignCats Location">
                         </iframe>
-                        -->
                     </div>
 
                 </div>
@@ -326,13 +325,18 @@
          ===================== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__inner">
-                <div class="footer__logo">DesignCats</div>
-                <div class="footer__info">
-                    <a href="tel:+441264000000">01264 000 000</a>
-                    <span>Andover, Hampshire, SP10</span>
+            <div class="footer__top">
+                <div>
+                    <div class="footer__logo">Design<span>Cats</span></div>
+                    <div class="footer__tagline">Independent Jaguar Specialist</div>
                 </div>
-                <p class="footer__copy">&copy; 2025 DesignCats. Independent Jaguar Specialist.</p>
+                <div class="footer__contact">
+                    <div class="footer__phone">01264 123 456</div>
+                    <div class="footer__location">Andover, Hampshire</div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 DesignCats. All rights reserved.</p>
             </div>
         </div>
     </footer>
