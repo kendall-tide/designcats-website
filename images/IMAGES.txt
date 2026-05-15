@@ -1,0 +1,43 @@
+DesignCats — Image Guide
+========================
+
+Place your images in this folder, then follow the swap-in notes
+in index.html (look for the HTML comments).
+
+Recommended images:
+
+  hero.jpg
+  --------
+  A high-quality photo of a Jaguar in or near the workshop.
+  Landscape orientation. Minimum 1600px wide.
+  Something calm and confident — not a showroom shot.
+  The dark overlay in CSS will tone it down appropriately.
+
+  workshop.jpg
+  ------------
+  A photo of the workshop or the owner at work.
+  Can be portrait or landscape — the CSS will crop it to fill.
+  Something that shows craft and care rather than a posed shot.
+
+  map.jpg (optional)
+  ------------------
+  A static map screenshot, or replace the placeholder div with
+  a Google Maps iframe — see the comment in index.html.
+
+Swapping in hero.jpg:
+  In index.html, inside .hero__bg, remove the <div class="hero__image-placeholder"> line
+  and replace with: <img src="images/hero.jpg" alt="Jaguar in the DesignCats workshop">
+  Then in style.css, update .hero__bg to:
+    position: relative; width: 100%; height: 100%;
+  and add:
+    .hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+Swapping in workshop.jpg:
+  In index.html, inside .about__image, remove the .image-placeholder div
+  and replace with: <img src="images/workshop.jpg" alt="The DesignCats workshop">
+
+File format notes:
+  - JPG is fine for photos (quality 80–85 is plenty)
+  - Keep hero under 400KB, workshop under 200KB for fast loading
+  - WebP is supported in all modern browsers and will be smaller if your
+    editing tool can export it — just change the file extension in index.html
