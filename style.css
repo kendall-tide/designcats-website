@@ -1,5 +1,5 @@
 /*
-  DesignCats — Jaguar & Land Rover Specialist
+  DesignCats UK — Jaguar & Land Rover Specialist
   style.css
 */
 
@@ -7,8 +7,8 @@
    Custom Properties
    ============================================================ */
 :root {
-    --clr-green:       #004225;
-    --clr-green-dark:  #003319;
+    --clr-accent:      #953737;
+    --clr-accent-dark: #7a2d2d;
     --clr-charcoal:    #1e1e1e;
     --clr-bg:          #ffffff;
     --clr-off-white:   #f8f7f5;
@@ -138,14 +138,14 @@ p {
 }
 
 .btn--primary {
-    background: var(--clr-green);
+    background: var(--clr-accent);
     color: #fff;
-    border: 1px solid var(--clr-green);
+    border: 1px solid var(--clr-accent);
 }
 
 .btn--primary:hover {
-    background: var(--clr-green-dark);
-    border-color: var(--clr-green-dark);
+    background: var(--clr-accent-dark);
+    border-color: var(--clr-accent-dark);
 }
 
 .btn--outline {
@@ -192,15 +192,15 @@ p {
 }
 
 .nav__logo {
-    font-family: var(--ff-serif);
-    font-size: 1.375rem;
-    font-weight: 600;
-    color: var(--clr-charcoal);
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
-.nav__logo span {
-    color: var(--clr-green);
+.nav__logo img {
+    height: 42px;
+    width: auto;
+    display: block;
 }
 
 .nav__links {
@@ -225,7 +225,7 @@ p {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--clr-green);
+    background: var(--clr-accent);
     transition: width 0.3s ease;
 }
 
@@ -240,13 +240,13 @@ p {
 .nav__phone {
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--clr-green);
+    color: var(--clr-accent);
     flex-shrink: 0;
     transition: color var(--ease);
 }
 
 .nav__phone:hover {
-    color: var(--clr-green-dark);
+    color: var(--clr-accent-dark);
 }
 
 /* Mobile hamburger */
@@ -391,7 +391,7 @@ p {
     font-family: var(--ff-serif);
     font-size: 2rem;
     font-weight: 400;
-    color: var(--clr-green);
+    color: var(--clr-accent);
     line-height: 1;
 }
 
@@ -418,7 +418,7 @@ p {
     right: -16px;
     width: 160px;
     height: 160px;
-    background: var(--clr-green);
+    background: var(--clr-accent);
     opacity: 0.15;
     z-index: -1;
 }
@@ -451,7 +451,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--clr-green);
+    color: var(--clr-accent);
     margin-bottom: 18px;
     flex-shrink: 0;
 }
@@ -485,14 +485,14 @@ p {
 .review-card {
     background: var(--clr-off-white);
     padding: 28px;
-    border-left: 2px solid var(--clr-green);
+    border-left: 2px solid var(--clr-accent);
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
 
 .review-card__stars {
-    color: var(--clr-green);
+    color: var(--clr-accent);
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     opacity: 0.8;
@@ -562,7 +562,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--clr-green);
+    color: var(--clr-accent);
     margin-top: 1px;
 }
 
@@ -583,7 +583,7 @@ p {
 
 .contact__detail a {
     font-size: 0.9375rem;
-    color: var(--clr-green);
+    color: var(--clr-accent);
     font-weight: 500;
     transition: opacity var(--ease);
 }
@@ -624,29 +624,41 @@ p {
 .footer__top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
+    align-items: center;
+    gap: 32px;
     flex-wrap: wrap;
     padding-bottom: 28px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     margin-bottom: 20px;
 }
 
-.footer__logo {
-    font-family: var(--ff-serif);
-    font-size: 1.375rem;
-    font-weight: 600;
-    color: #fff;
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.footer__logo span {
-    color: rgba(255, 255, 255, 0.55);
+.footer__logo {
+    display: inline-block;
+}
+
+.footer__logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+    opacity: 0.9;
+}
+
+.footer__autogroup img {
+    height: 36px;
+    width: auto;
+    display: block;
+    opacity: 0.75;
 }
 
 .footer__tagline {
     font-size: 0.8125rem;
     color: rgba(255, 255, 255, 0.4);
-    margin-top: 5px;
 }
 
 .footer__contact {
@@ -654,10 +666,10 @@ p {
 }
 
 .footer__phone {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .footer__location {
@@ -761,10 +773,15 @@ p {
     .footer__top {
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
     }
 
     .footer__contact {
         text-align: left;
+    }
+
+    .footer__autogroup img {
+        height: 28px;
     }
 }
 
@@ -815,6 +832,10 @@ p {
     .footer__top {
         align-items: center;
         text-align: center;
+    }
+
+    .footer__brand {
+        align-items: center;
     }
 
     .footer__contact {
