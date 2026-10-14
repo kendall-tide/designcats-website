@@ -22,7 +22,7 @@
 
     --max-w:       1160px;
     --pad-section: 72px;
-    --nav-h:       88px;
+    --nav-h:       100px;
 
     --ease: 0.2s ease;
 }
@@ -198,7 +198,7 @@ p {
 }
 
 .nav__logo img {
-    height: 64px;
+    height: 80px;
     width: auto;
     display: block;
 }
@@ -755,7 +755,7 @@ p {
 }
 
 .footer__logo img {
-    height: 56px;
+    height: 64px;
     width: auto;
     display: block;
     opacity: 0.9;
@@ -910,11 +910,11 @@ p {
 @media (max-width: 560px) {
     :root {
         --pad-section: 44px;
-        --nav-h:       72px;
+        --nav-h:       80px;
     }
 
     .nav__logo img {
-        height: 52px;
+        height: 60px;
     }
 
     .container {
