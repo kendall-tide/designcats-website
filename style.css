@@ -758,7 +758,8 @@ p {
     height: 64px;
     width: auto;
     display: block;
-    opacity: 0.9;
+    /* Lift the dark red so it reads against the charcoal footer */
+    filter: brightness(1.35);
 }
 
 
