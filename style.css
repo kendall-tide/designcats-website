@@ -1,5 +1,5 @@
 /*
-  DesignCats UK — Jaguar & Land Rover Specialist
+  DesignCats UK — Independent Jaguar Specialist
   style.css
 */
 
@@ -22,7 +22,7 @@
 
     --max-w:       1160px;
     --pad-section: 72px;
-    --nav-h:       68px;
+    --nav-h:       88px;
 
     --ease: 0.2s ease;
 }
@@ -198,7 +198,7 @@ p {
 }
 
 .nav__logo img {
-    height: 42px;
+    height: 64px;
     width: auto;
     display: block;
 }
@@ -473,12 +473,106 @@ p {
     line-height: 1.72;
 }
 
+.services__recovery {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-top: 24px;
+    padding: 28px;
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-left: 2px solid var(--clr-accent);
+}
+
+.services__recovery .service-card__icon {
+    margin-bottom: 0;
+}
+
+.services__recovery h3 {
+    font-size: 1.0625rem;
+    margin-bottom: 6px;
+}
+
+.services__recovery p {
+    font-size: 0.9375rem;
+}
+
+/* ============================================================
+   Gallery
+   ============================================================ */
+.gallery__carousel {
+    position: relative;
+}
+
+.gallery__track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.gallery__track::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery__slide {
+    flex: 0 0 calc((100% - 32px) / 3);
+    aspect-ratio: 4 / 3;
+    scroll-snap-align: start;
+    overflow: hidden;
+    /* Shown until a photo is added for this slide */
+    background: var(--clr-charcoal) url("images/logo-icon.png") center / 64px no-repeat;
+}
+
+.gallery__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--clr-charcoal);
+    border: 1px solid var(--clr-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background var(--ease), color var(--ease);
+}
+
+.gallery__btn:hover {
+    background: var(--clr-accent);
+    border-color: var(--clr-accent);
+    color: #fff;
+}
+
+.gallery__btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.gallery__btn--prev { left: -22px; }
+.gallery__btn--next { right: -22px; }
+
 /* ============================================================
    Reviews
    ============================================================ */
 .reviews__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 860px;
+    margin: 0 auto;
     gap: 20px;
 }
 
@@ -643,7 +737,7 @@ p {
 }
 
 .footer__logo img {
-    height: 40px;
+    height: 56px;
     width: auto;
     display: block;
     opacity: 0.9;
@@ -770,6 +864,13 @@ p {
         gap: 16px;
     }
 
+    .gallery__slide {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+
+    .gallery__btn--prev { left: 8px; }
+    .gallery__btn--next { right: 8px; }
+
     .footer__top {
         flex-direction: column;
         align-items: flex-start;
@@ -791,6 +892,11 @@ p {
 @media (max-width: 560px) {
     :root {
         --pad-section: 44px;
+        --nav-h:       72px;
+    }
+
+    .nav__logo img {
+        height: 52px;
     }
 
     .container {
@@ -823,6 +929,14 @@ p {
 
     .about__stat-number {
         font-size: 1.75rem;
+    }
+
+    .gallery__slide {
+        flex-basis: 85%;
+    }
+
+    .services__recovery {
+        padding: 22px 20px;
     }
 
     .contact__detail-icon {

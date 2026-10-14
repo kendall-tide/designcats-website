@@ -62,4 +62,44 @@
         });
     });
 
+    // Gallery carousel: arrow buttons plus gentle auto-scroll
+    var track = document.querySelector('.gallery__track');
+    if (track) {
+        var prev = document.querySelector('.gallery__btn--prev');
+        var next = document.querySelector('.gallery__btn--next');
+
+        function slideWidth() {
+            var slide = track.querySelector('.gallery__slide');
+            return slide ? slide.getBoundingClientRect().width + 16 : track.clientWidth;
+        }
+
+        function step(dir) {
+            var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+            if (dir > 0 && atEnd) {
+                track.scrollTo({ left: 0 });
+            } else {
+                track.scrollBy({ left: dir * slideWidth() });
+            }
+        }
+
+        prev.addEventListener('click', function () { step(-1); });
+        next.addEventListener('click', function () { step(1); });
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var paused = false;
+        var carousel = track.parentNode;
+        ['mouseenter', 'touchstart', 'focusin'].forEach(function (ev) {
+            carousel.addEventListener(ev, function () { paused = true; }, { passive: true });
+        });
+        ['mouseleave', 'focusout'].forEach(function (ev) {
+            carousel.addEventListener(ev, function () { paused = false; });
+        });
+
+        if (!reduceMotion) {
+            setInterval(function () {
+                if (!paused && !document.hidden) step(1);
+            }, 4000);
+        }
+    }
+
 })();
