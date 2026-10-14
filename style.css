@@ -761,12 +761,6 @@ p {
     opacity: 0.9;
 }
 
-.footer__autogroup img {
-    height: 36px;
-    width: auto;
-    display: block;
-    opacity: 0.75;
-}
 
 .footer__tagline {
     font-size: 0.8125rem;
@@ -897,10 +891,6 @@ p {
 
     .footer__contact {
         text-align: left;
-    }
-
-    .footer__autogroup img {
-        height: 28px;
     }
 }
 
